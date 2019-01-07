@@ -1,10 +1,9 @@
 # To-do APP in JavaScript :
 
-## Used technologies
 - HTML
 - CSS
 - JavaScript
 
-### Demo
+## Demo
 
-Visit 
+Visit https://marcinj94.github.io/todo-app/
