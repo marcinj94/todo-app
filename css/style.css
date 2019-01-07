@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #ee0979;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    overflow-x: hidden;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    font-size: 50px;
+}
+
+.form-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    border: none;
+    box-shadow: 0 0 15px black, 0 0 50px black;
+    height: 80px;
+    width: 70%;
+    margin: 0 40px 20px;
+    background-color: transparent;
+    font-size: 20px;
+    padding-left: 10px;
+    color: black;
+    max-width: 700px;
+    transition: .3s;
+}
+
+input:focus {
+    box-shadow: 0 0 30px black, 0 0 120px black;
+    color: black;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+button {
+    border: 2px solid black;
+    background-color: transparent;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 25px;
+    border-radius: 5px;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+ul {
+    text-align: center;
+}
+
+li {
+    padding: 40px;
+    min-height: 50px;
+    list-style-type: none;
+    position: relative;
+    font-size: 25px;
+    word-wrap: break-word;
+    transition: .3s;
+}
+
+li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background-color: black
+}
+
+li.done {
+    text-decoration: line-through;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+li button {
+    border: 2px solid black;
+    margin-left: 15px;
+}
+
+@media (orientation: landscape) {
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-container {
+        margin-bottom: 10px;
+    }
+
+    li {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    button {
+        border: none;
+    }
+
+    li button:hover {
+        background-color: #000;
+        color: white;
+    }
+
+    button:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        content: '';
+        height: 2px;
+        background-color: #000;
+        transition: .3s;
+    }
+
+
+    button.add:hover:after {
+        color: white;
+        right: 0;
+    }
+
+    li:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: white;
+    }
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    .form-container {
+        margin-bottom: 20px;
+    }
+
+    li {
+        padding: 40px;
+    }
+
+}
