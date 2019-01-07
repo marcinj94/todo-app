@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -10,6 +11,7 @@ html {
 
 body {
     background: #ee0979;
+    background: -webkit-gradient(linear, left top, right top, from(#ff6a00), to(#ee0979));
     background: linear-gradient(to right, #ff6a00, #ee0979);
     overflow-x: hidden;
 }
@@ -27,6 +29,7 @@ body {
 
 input {
     border: none;
+    -webkit-box-shadow: 0 0 15px black, 0 0 50px black;
     box-shadow: 0 0 15px black, 0 0 50px black;
     height: 80px;
     width: 70%;
@@ -36,12 +39,26 @@ input {
     padding-left: 10px;
     color: black;
     max-width: 700px;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
 input:focus {
+    -webkit-box-shadow: 0 0 30px black, 0 0 120px black;
     box-shadow: 0 0 30px black, 0 0 120px black;
     color: black;
+}
+
+input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
 }
 
 input::placeholder {
@@ -53,6 +70,7 @@ button {
     background-color: transparent;
     padding: 5px 15px;
     cursor: pointer;
+    -webkit-transition: .3s;
     transition: .3s;
     font-size: 25px;
     border-radius: 5px;
@@ -75,6 +93,7 @@ li {
     position: relative;
     font-size: 25px;
     word-wrap: break-word;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
@@ -131,6 +150,7 @@ li button {
         content: '';
         height: 2px;
         background-color: #000;
+        -webkit-transition: .3s;
         transition: .3s;
     }
 
